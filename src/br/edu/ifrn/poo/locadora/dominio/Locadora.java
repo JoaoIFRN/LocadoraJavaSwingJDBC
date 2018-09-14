@@ -14,17 +14,25 @@ import java.util.List;
  */
 public class Locadora {
     
-    private List<Veiculo> veiculos = new ArrayList();
-    
-    public void cadastrarVeiculo(Veiculo veiculo){
-        if (veiculo != null && !veiculos.contains(veiculo))
-            veiculos.add(veiculo);
+    private int id;
+    private String nome;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     
-    public void alugar(String placa){
-        if (veiculos.contains(new Veiculo(placa))){
-            veiculos.get(veiculos.indexOf(new Veiculo(placa))).setDisponibilidade(false);
-        }
-    }
+    
     
 }
